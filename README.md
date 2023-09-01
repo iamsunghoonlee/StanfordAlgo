@@ -16,7 +16,7 @@
 
 ## 3. Greedy Algorithms, Minimum Spanning Trees, and Dynamic Programming
 
-1 Job Scheduling
+1. Job Scheduling
 2. Clustering
 3. Huffman, MWIS
 4. Kanpsack
