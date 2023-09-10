@@ -6,7 +6,7 @@ def read_file(filepath : str):
     return integer_list
 
 
-# 2. Counting Inversion Function
+# 2. Merging Lists and Counting Split Inversion Function (Used inside Sort and Count Function)
 def merge_and_count_split_inv(L1: list, L2: list):
     # L1, L2 : sorted list / n = list length
     # List to store sorted integers
@@ -43,7 +43,7 @@ def merge_and_count_split_inv(L1: list, L2: list):
     return L, count
 
 
-
+# 3. Sort and Count Function
 def sort_and_count(A: list):
     if len(A) == 1:
         return A, 0
@@ -63,6 +63,6 @@ def main():
     A = read_file("Chapter1\\1-2 Integer Array.txt")
     print(sort_and_count(A)[1])
 
-    
+
 if __name__ == '__main__':
     main()
