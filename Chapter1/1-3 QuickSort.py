@@ -9,39 +9,37 @@ def read_file(filepath : str):
 
 # 2. Choose Pivot Fuction
 
-# 2-1. First Element of the input array
-def choose_pivot_1(A: list):
-    pivot = 0
-    return pivot
-# 2-2. Last Element of the input array
-def choose_pivot_2(A: list):
-    pivot = len(A)-1
-    return pivot
-
-# 2-3. Median Element of the input array
-def choose_pivot_3(A: list):
-    # Median Candidates
-    p1 = 0
-    p3 = len(A)-1
-    if len(A)//2 == len(A)/2:
-        p2 = len(A)//2 - 1
-    else:
-        p2 = len(A)//2
+def choose_pivot(A: list, type: int):
+    if type == 1:
+        pivot = 0
     
-    # Getting Median among Three Candidates
-    if ((A[p1] < A[p2] and A[p2] < A[p3]) or (A[p3] < A[p2] and A[p2] < A[p1])) :
-        pivot = p2
-    elif ((A[p2] < A[p1] and A[p1] < A[p3]) or (A[p3] < A[p1] and A[p1] < A[p2])) :
-        pivot = p1
-    else :
-        pivot = p3
-    return pivot
+    elif type == 2:
+        pivot = len(A)-1
+    
+    elif type == 3:
+        p1 = 0
+        if len(A)//2 == len(A)/2:
+            p2 = len(A)//2 - 1
+        else:
+            p2 = len(A)//2
+        p3 = len(A)-1
+        
+        # Getting Median among Three Candidates
+        if ((A[p1] < A[p2] and A[p2] < A[p3]) or (A[p3] < A[p2] and A[p2] < A[p1])) :
+            pivot = p2
+        elif ((A[p2] < A[p1] and A[p1] < A[p3]) or (A[p3] < A[p1] and A[p1] < A[p2])) :
+            pivot = p1
+        else :
+            pivot = p3
+        return pivot
+
 
 
 # 3. Partition Functions
 
-def partition(A: list, l: int, r: int, pivot: int):
+def partition(A: list, l: int, r: int, type: int):
     # Swapping Chosen Pivot and the First Item
+    pivot = choose_pivot(A, type)
     A[0], A[pivot] = A[pivot], A[0]
     
     p = A[0]
@@ -51,17 +49,18 @@ def partition(A: list, l: int, r: int, pivot: int):
             A[i], A[j] = A[j], A[i]
             i += 1
     A[l], A[i-1] = A[i-1], A[l]
-
-
+    return A
 
 
 # 4. Quick Sort Function
+
 def quick_sort(A: list, n: int):
     if n == 1:
         return A
     
     else:
-
+        pivot = choose_pivot(A, 1)
+        partition(A, )
 
 # def main():
 #     A = read_file("Chapter1\\1-3 QuickSort.txt")
