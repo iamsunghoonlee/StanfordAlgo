@@ -2,7 +2,7 @@
 
 ## 1. Divide and Conquer, Sorting and Searching, and Randomized Algorithms
 
-1. Interger Multiplication
+1. Integer Multiplication
 2. Integer Array
 3. Quick Sort
 4. KargerMinCut
@@ -19,7 +19,7 @@
 1. Job Scheduling
 2. Clustering
 3. Huffman, MWIS
-4. Kanpsack
+4. Knapsack
 
 ## 4. Shortest Paths Revisited, NP-Complete Problems and What To Do About Them
 
