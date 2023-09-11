@@ -20,8 +20,8 @@ def read_file(filepath : str):
     
     return g
 
-# g = read_file("Chapter1\\1-4. karger MinCut.txt")
-# print(g[0])
+g = read_file("Chapter1\\1-4 Karger MinCut.txt")
+print(g[0])
 
 # 0. Edge Count
 def edge_count(graph):
@@ -93,17 +93,23 @@ def merge_vertices(graph, u: int, v: int):
 
 # 3. Karger MinCut : Repeat the group of functions until one edge left (2 vertices)
 def karger_mincut(graph):
-    while edge_count(graph) >= 2:
+    while edge_count(graph) > 2:
+        print(edge_count(graph))
         u, v = random_choice(graph)
         merge_vertices(graph, u, v)
-    return graph
-
-
-test_graph = [[1,2,3], [0,3], [0, 3], [0, 1, 2]]
-print(karger_mincut(test_graph))
-
-
-# def main():
     
-# if __name__ == '__main__':
-#     main()
+    # Count Edges
+    for i in graph:
+        if len(graph[i]) > 0:
+            edge_num = len(graph[i])
+    return graph, edge_num
+
+
+
+def main():
+    g = read_file("Chapter1\\1-4 Karger MinCut.txt")
+    graph = g.copy()
+    print(karger_mincut(graph)[1])
+    
+if __name__ == '__main__':
+    main()
