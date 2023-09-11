@@ -15,8 +15,8 @@ def read_file(filepath : str):
             line.append(int(i)-1)
         g.append(line)
 
-    for i in range(len(g)):
-        g[i].remove(i)
+    # for i in range(len(g)):
+    #     g[i].remove(i)
     
     return g
 
@@ -106,10 +106,10 @@ def karger_mincut(graph):
 
 
 
-def main():
-    g = read_file("Chapter1\\1-4 Karger MinCut.txt")
-    graph = g.copy()
-    print(karger_mincut(graph)[1])
+# def main():
+#     g = read_file("Chapter1\\1-4 Karger MinCut.txt")
+#     graph = g.copy()
+#     print(karger_mincut(graph)[1])
     
-if __name__ == '__main__':
-    main()
+# if __name__ == '__main__':
+#     main()
