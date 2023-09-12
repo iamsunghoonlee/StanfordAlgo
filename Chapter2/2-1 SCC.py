@@ -76,7 +76,7 @@ def main():
     G, G_rev = read_file("Chapter2\\2-1 SCC.txt")
     finish = dfs_1(G_rev, num_nodes)
     scc = dfs_2(G, num_nodes)
-    print(','.join(map(lambda x: str(x), sorted(scc)[::-1][:5])))
+    print(sorted(scc)[::-1][:5])
 
 if __name__ == '__main__':
     threading.stack_size(67108864) # 64MB stack
