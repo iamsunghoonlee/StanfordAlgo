@@ -1,6 +1,6 @@
 ### 1. GENERAL DIRECTIONS:
 
-Download the following text file: QuickSort.txt
+Download the following text file: **1-3 QuickSort.txt**
 
 The file contains all of the integers between 1 and 10,000 (inclusive, with no repeats) in unsorted order. The integer in the i th row of the file gives you the i th entry of an input array.
 
