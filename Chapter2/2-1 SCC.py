@@ -21,15 +21,15 @@ def read_file(filePath: str):
 
 # 1. DFS Loop 1 on G rev
 
-def dfs_util_1(graph, v):
+def dfs_util_1(graph, i):
     global t, visited
     
-    visited[v] = True
-    for i in graph[v]:
-        if visited[i] == False:
-            dfs_util_1(graph, i)
+    visited[i] = True
+    for j in graph[i]:
+        if visited[j] == False:
+            dfs_util_1(graph, j)
             
-    finish[t] = v
+    finish[t] = i
     t = t+1
         
 def dfs_1(graph, num_nodes):
@@ -41,7 +41,8 @@ def dfs_1(graph, num_nodes):
     
     for i in reversed(range(num_nodes)):
         if visited[i] == False:
-            dfs_util_1(i, visited)
+            dfs_util_1(graph, i)
+            
     return finish
 
 # 2. DFS Loop 2 on Finishing Time
@@ -53,6 +54,8 @@ def dfs_util_2(graph, i):
     for j in graph[i]:
         if visited[j] == False:
             dfs_util_2(graph, j)
+    
+    scc_size += 1
 
 def dfs_2(graph, num_nodes):
     global visited, scc_size, finish
@@ -63,7 +66,7 @@ def dfs_2(graph, num_nodes):
     for i in reversed(range(num_nodes)):
         if visited[finish[i]] == False:
             scc_size = 0
-            dfs_util_1(graph, finish[i])
+            dfs_util_2(graph, finish[i])
             scc.append(scc_size)
             
     return scc
