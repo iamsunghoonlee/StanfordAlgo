@@ -15,8 +15,8 @@ def read_file(filepath : str):
             line.append(int(i)-1)
         g.append(line)
 
-    # for i in range(len(g)):
-    #     g[i].remove(i)
+    for i in range(len(g)):
+        g[i].remove(i)
     
     return g
 
