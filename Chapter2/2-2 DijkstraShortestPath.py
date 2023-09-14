@@ -54,10 +54,12 @@ def dijkstra_sp(edge_list, start: int, num_nodes: int):
    
             
 def main():
+    print(0)
     edge_list = read_file('Chapter2\\2-2 DijkstraShortestPath.txt')
     num_nodes = 200
     start_node = 0
     sp = dijkstra_sp(edge_list, 0, 200)
+    print(0)
     # Shortest Path toward (7,37,59,82,99,115,133,165,188,197)th vertex
     print(sp[6], sp[36], sp[58], sp[81], sp[98], sp[114], sp[132], sp[164], sp[187], sp[196])
     
