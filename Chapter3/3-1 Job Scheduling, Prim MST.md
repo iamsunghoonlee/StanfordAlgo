@@ -30,13 +30,13 @@ Download the text file below.
 
 **3-1 Prim MST.txt**
 
-This file describes an undirected graph with integer edge costs. It has the format
+This file describes an **undirected graph** with integer edge costs. It has the format
 [number_of_nodes] [number_of_edges]
 [one_node_of_edge_l] [other_node_of_edge_l] [edge_l_cost]
 [one_node_of_edge_2] [other_node_of_edge_2] [edge_2_cost]
 ...
 
-For example, the third line of the file is "2 3 -8874'; indicating that there is an edge connecting vertex #2 and vertex #3 that has cost -8874. You should NOT assume that edge costs are positive, nor should you assume that they are distinct. Your task is to run Prim's minimum spanning tree algorithm on this graph. You should report the overall cost of a minimum spanning t ree --- an integer, which may or may not be negative --- in the box below.
+For example, the third line of the file is "2 3 -8874'; indicating that there is an edge connecting vertex #2 and vertex #3 that has cost -8874. You should NOT assume that edge costs are positive, nor should you assume that they are distinct. Your task is to run Prim's minimum spanning tree algorithm on this graph. You should report the **overall cost** of a minimum spanning tree --- an integer, which may or may not be negative --- in the box below.
 
 IMPLEMENTATION NOTES: This graph is small enough that the straightforward O(mn) time implementation of
 Prim's algorithm should work fine. 

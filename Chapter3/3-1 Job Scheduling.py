@@ -15,6 +15,7 @@ def read_file(filepath: str):
                  
     return num_jobs, job_list
 
+
 # decreasing order of (weight - len)
 def job_schedule1(job_list):
     # Generate key(weight - len) list, dict
@@ -48,7 +49,8 @@ def job_schedule1(job_list):
             weighted_sum += k1_dict[i][0][0]
     
     return weighted_sum
-    
+
+
 # decreasing order of (weight / len)
 def job_schedule2(job_list):
     # Generate key(weight / len) list, dict
