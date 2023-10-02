@@ -12,13 +12,16 @@ This file describes an instance of the problem. It has the following format:
 
 For example, the third line of the file is "6852892," indicating that the weight of the second symbol of the alphabet is 6852892. (We're using weights instead of frequencies, like in the "A More Complex Example" video.)
 
-Your task in this problem is to run the Huffman coding algorithm from lecture on this data set. What is the maximum length of a codeword in the resulting Huffman code?
+Your task in this problem is to run the Huffman coding algorithm from lecture on this data set. What is **the maximum length of a codeword** in the resulting Huffman code?
 
 ADVICE: If you're not getting the correct answer, try debugging your algorithm using some small test cases. And then post them to the discussion forum!
 
 ### 2. Continuing the previous problem, what is the minimum length of a codeword in your Huffman code?
 
-### 3. In this programming problem you'll code up the dynamic programming algorithm for computing a maximumweight independent set of a path graph.
+
+
+
+### 3. In this programming problem you'll code up the dynamic programming algorithm for computing a maximum weight independent set of a path graph.
 
 Download the text file below.
 

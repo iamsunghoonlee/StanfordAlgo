@@ -2,9 +2,7 @@ import heapq
 
 def read_file(filepath):
     file = open(filepath, 'r')
-    
     sym_number = int(file.readline())
-
     weights = file.readlines()
     sym_weight = []
     weight_sum = 0
@@ -44,15 +42,13 @@ def printNodes(node, val=''):
     # huffman code for current node
     newVal = val + str(node.huff)
   
-    # if node is not an edge node
-    # then traverse inside it
+    # if node is not an edge node traverse inside
     if(node.left):
         printNodes(node.left, newVal)
     if(node.right):
         printNodes(node.right, newVal)
   
-        # if node is edge node then
-        # display its huffman code
+        # if node is edge node then display huffman
     if(not node.left and not node.right):
         print(f"{node.symbol} -> {newVal}")
 
