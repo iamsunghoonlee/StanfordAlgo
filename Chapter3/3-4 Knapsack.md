@@ -2,11 +2,11 @@
 
 Download the text file below.
 
-**3-4 knapsack.txt**
+**3-4 knapsack1.txt**
 
 This file describes a knapsack instance, and it has the following format:
-[knapsack_size ][number_ of_items]
-[value_l] [weight_l ]
+[knapsack_size] [number_of_items]
+[value_l] [weight_l]
 [value_2] [weight_2]
 
 For example, the third line of the file is "50074 659", indicating that the second item has value 50074 and size 659, respectively.
@@ -18,11 +18,11 @@ ADVICE: If you're not getting the correct answer, try debugging your algorithm u
 
 Download the text file below.
 
-**3-4 knapsack_big.txt**
+**3-4 knapsack2.txt**
 
 This file describes a knapsack instance, and it has the following format:
-[knapsack_size] [number_ of_items]
-[value_l] [weight_l ]
+[knapsack_size] [number_of_items]
+[value_l] [weight_l]
 [value_2] [weight_2]
 
 For example, the third line of the file is "50074 834558", indicating that the second item has value 50074 and size 834558, respectively. As before, you should assume that item weights and the knapsack capacity are integers.
