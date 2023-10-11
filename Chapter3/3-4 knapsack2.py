@@ -16,9 +16,9 @@ def read_file(filepath):
     return allowed_size, num_item, value, weight      
 
 def knapsack (allowed_size, num_item, value, weight):
-    A = [[0 for x in range(allowed_size + 1)] for x in range(num_item + 1)]
-    
-    for i in range(num_item + 1):
+    A = [[-1 for x in range(allowed_size + 1)] for x in range(num_item + 1)]
+
+    for i in range(1, num_item + 1):
         for j in range(allowed_size + 1):
             if i == 0 or j == 0:
                 A[i][j] = 0
@@ -26,7 +26,7 @@ def knapsack (allowed_size, num_item, value, weight):
                 A[i][j] = max(value[i-1] + A[i-1][j - weight[i-1]], A[i-1][j])
             else:
                 A[i][j] = A[i-1][j]
-                
+
     return A[num_item][allowed_size]
 
 def main():

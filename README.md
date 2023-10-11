@@ -24,6 +24,6 @@
 ## 4. Shortest Paths Revisited, NP-Complete Problems and What To Do About Them
 
 1. All Pair Shortest Path
-2.
-3. TSP
+2. TSP 1
+3. TSP 2
 4. 2SAT
