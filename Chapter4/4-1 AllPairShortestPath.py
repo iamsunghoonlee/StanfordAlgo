@@ -20,7 +20,7 @@ def read_file(name):
                 Array[i,j,0] = inf
     for index, line in enumerate(data[1:]):
         item = line.split()
-        Array[int(item[0]) -1 ,int(item[1])-1,0] = int(item[2])
+        Array[int(item[0])-1 ,int(item[1])-1,0] = int(item[2])
         
     return Array
 
